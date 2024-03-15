@@ -1,0 +1,33 @@
+# @package suite
+defaults:
+  - _self_
+  - particle_task@_global_: reach
+
+suite: particle
+
+name: 'particle'
+
+# task settings
+hidden_dim: 256
+height: 200
+width: 200
+
+# train settings
+num_train_steps: 30000
+log_every_steps: 100
+save_snapshot_every_step: 2000
+
+# eval
+eval_every_steps: 2000
+num_eval_episodes: 10
+
+# snapshot
+save_snapshot: true
+
+task_make_fn:
+  _target_: suite.particle.make
+  name: ${task_name}
+  seed: ${seed}
+  height: ${suite.height}
+  width: ${suite.width}
+  block: null

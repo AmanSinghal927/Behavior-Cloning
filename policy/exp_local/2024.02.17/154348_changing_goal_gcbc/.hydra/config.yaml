@@ -1,0 +1,42 @@
+root_dir: C:/Users/J C SINGLA/rl/assignment 1
+seed: 42
+device: cpu
+save_video: true
+use_tb: true
+batch_size: 256
+obs_type: features
+experiment: changing_goal_gcbc
+dataset_type: changing_goal
+train_test_ratio: 0.8
+expert_dataset: ${root_dir}/data/${dataset_type}_1000demos.pkl
+agent:
+  _target_: agent.gcbc.BCAgent
+  obs_shape: ???
+  action_shape: ???
+  device: ${device}
+  lr: 0.0001
+  hidden_dim: ${suite.hidden_dim}
+  stddev_schedule: 0.1
+  stddev_clip: 0.3
+  use_tb: ${use_tb}
+  obs_type: ${obs_type}
+suite:
+  suite: particle
+  name: particle
+  hidden_dim: 256
+  height: 200
+  width: 200
+  num_train_steps: 30000
+  log_every_steps: 100
+  save_snapshot_every_step: 2000
+  eval_every_steps: 2000
+  num_eval_episodes: 10
+  save_snapshot: true
+  task_make_fn:
+    _target_: suite.particle.make
+    name: ${task_name}
+    seed: ${seed}
+    height: ${suite.height}
+    width: ${suite.width}
+    block: null
+task_name: particle-v0

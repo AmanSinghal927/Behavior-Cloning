@@ -1,0 +1,3 @@
+- agent=gcbc
+- dataset_type=multimodal
+- experiment=multimodal_gcbc

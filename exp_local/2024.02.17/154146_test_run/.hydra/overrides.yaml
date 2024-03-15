@@ -1,0 +1,3 @@
+- agent=gcbc
+- dataset_type=changing_goal
+- experiment=test_run

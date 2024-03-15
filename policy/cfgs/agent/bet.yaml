@@ -1,0 +1,15 @@
+# @package agent
+_target_: agent.bet.Agent
+obs_shape: ??? # to be specified later
+action_shape: ??? # to be specified later
+device: ${device}
+lr: 1e-4
+hidden_dim: ${suite.hidden_dim}
+stddev_schedule: 0.1
+stddev_clip: 0.3
+use_tb: ${use_tb}
+obs_type: ${obs_type}
+nbins: 8
+kmeans_iters: 50
+offset_weight: 0.2
+offset_loss_weight: 100

@@ -1,0 +1,31 @@
+defaults:
+  - _self_
+  - agent: bc
+  - suite: particle
+  - override hydra/launcher: submitit_local
+
+# Root Dir
+root_dir: /path/to/dir
+
+# misc
+seed: 42
+device: cpu
+save_video: true
+use_tb: true
+batch_size: 256
+num_eval_episodes: 10
+
+# experiment
+obs_type: 'features' # pixels, features
+experiment: bc
+
+# expert dataset
+train_test_ratio: 0.8
+expert_dataset: /path/to/data
+
+# weight
+weight: /path/to/weight
+
+hydra:
+  run:
+    dir: ./exp_local/${now:%Y.%m.%d}/${now:%H%M%S}_${experiment}

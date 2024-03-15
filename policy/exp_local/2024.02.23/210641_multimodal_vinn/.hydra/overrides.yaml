@@ -1,0 +1,3 @@
+- agent=bc
+- dataset_type=multimodal
+- experiment=multimodal_vinn

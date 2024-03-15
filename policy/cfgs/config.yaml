@@ -1,0 +1,28 @@
+defaults:
+  - _self_
+  - agent: bc
+  - suite: particle
+  - override hydra/launcher: submitit_local
+
+# Root Dir
+root_dir: 'C:/Users/J C SINGLA/rl/assignment 1'
+
+# misc
+seed: 42
+device: cpu
+save_video: true
+use_tb: true
+batch_size: 256
+
+# experiment
+obs_type: 'features' # pixels, features
+experiment: bc
+dataset_type: 'multimodal' # fixed_goal, changing_goal, multimodal
+
+# expert dataset
+train_test_ratio: 0.8
+expert_dataset: ${root_dir}/data/${dataset_type}_1000demos.pkl
+
+hydra:
+  run:
+    dir: ./exp_local/${now:%Y.%m.%d}/${now:%H%M%S}_${experiment}
