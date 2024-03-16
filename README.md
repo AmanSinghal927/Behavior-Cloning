@@ -29,12 +29,6 @@ For fixed goal BC, the goal is fixed, however the starting position of the agent
 
 The agent moves slowly after training and does not reach the goal every time even after training for 8000 iterations. This is because the agent has no information of the goal and is hence moving randomly. If it reaches the goal it is due to chance.
 
-## Fixed goal GCBC
-
-![Fixed goal GCBC GIF](fixed_goal_bc.gif)
-
-Having knowledge of the goal is unnecessary in this experiment as the goal is fixed across episodes. The agent is easily able to reach the goal.
-
 ## Changing goal GCBC
 
 ![Changing goal GCBC GIF](changing_goal_gcbc.gif)
