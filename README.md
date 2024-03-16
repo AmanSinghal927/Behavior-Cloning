@@ -1,4 +1,4 @@
-# Behavior Cloning Report
+# Behavior Cloning
 
 ```
 ## Python environment installation instructions
