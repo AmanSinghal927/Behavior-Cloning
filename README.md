@@ -11,6 +11,10 @@
 - Update the `root_dir` variable in `cfgs/config.yml` to the absolute path of the `Tutorial_1` directory.
 - Command to run code: `python train.py agent=<agent_name> dataset_type=<dataset_type> experiment=<exp_name>` where `agent_name` is one of `['bc', 'gcbc', 'bet']`, `dataset_type` is one of `['fixed_goal', 'changing_goal', 'multimodal']` and `exp_name` is the name of the experiment.
 
+## Data GDrive
+
+https://drive.google.com/drive/folders/1FwI6vXrWLUizBwajKFfwisPvEYg98KHK?usp=drive_link
+
 ```
 
 ## Fixed goal BC
